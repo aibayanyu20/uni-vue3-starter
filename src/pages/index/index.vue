@@ -1,18 +1,20 @@
-<template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
-  </view>
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue'
 const title = ref('Hello')
 </script>
 
-<style>
+<template>
+  <view class="content">
+    <image class="logo" src="/static/logo.png" />
+    <view class="text-area">
+      <text class="title">
+        {{ title }}
+      </text>
+    </view>
+  </view>
+</template>
+
+<style lang="scss">
 .content {
   display: flex;
   flex-direction: column;
@@ -21,12 +23,9 @@ const title = ref('Hello')
 }
 
 .logo {
-  height: 150rpx;
-  width: 150rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
+  height: rpx(150);
+  width: rpx(150);
+  margin: rpx(200) auto rpx(50);
 }
 
 .text-area {
@@ -35,7 +34,7 @@ const title = ref('Hello')
 }
 
 .title {
-  font-size: 34rpx;
+  font-size: rpx(30);
   color: #8f8f94;
 }
 </style>
